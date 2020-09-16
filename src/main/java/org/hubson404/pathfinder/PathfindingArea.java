@@ -2,6 +2,8 @@ package org.hubson404.pathfinder;
 
 import java.util.Arrays;
 
+import static org.hubson404.pathfinder.FieldType.Empty;
+
 
 public class PathfindingArea {
 
@@ -14,6 +16,15 @@ public class PathfindingArea {
         this.boardWidth = boardWidth;
         this.boardHeight = boardHeight;
         this.board = new Field[this.boardHeight][this.boardWidth];
+        fillBoardWithEmptyFields(this.board);
+    }
+
+    private void fillBoardWithEmptyFields(Field[][] board) {
+        for (int i = 0; i < boardHeight; i++) {
+            for (int k = 0; k < boardWidth; k++) {
+                board[i][k] = new Field(Empty);
+            }
+        }
     }
 
     public Field[][] getBoard() {
