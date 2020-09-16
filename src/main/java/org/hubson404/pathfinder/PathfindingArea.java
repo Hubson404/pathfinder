@@ -37,10 +37,10 @@ public class PathfindingArea {
                 if (field.fieldType == Empty) {
                     System.out.print("|   ");
                 }
-                if (field.fieldType == StartField) {
+                if (field.fieldType == Start) {
                     System.out.print("|SRT");
                 }
-                if (field.fieldType == FinishField) {
+                if (field.fieldType == Finish) {
                     System.out.print("|FNS");
                 }
                 if (field.fieldType == Obstacle) {
@@ -56,11 +56,11 @@ public class PathfindingArea {
     }
 
     public void placeStartField(int row, int col) {
-        board[row-1][col-1] = new Field(StartField);
+        board[row-1][col-1] = new Field(Start);
     }
 
     public void placeFinishField(int row, int col) {
-        board[row-1][col-1] = new Field(FinishField);
+        board[row-1][col-1] = new Field(Finish);
     }
 
     public void placeObstacleField(int row, int col) {
