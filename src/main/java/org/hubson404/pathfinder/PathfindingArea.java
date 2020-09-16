@@ -32,7 +32,7 @@ public class PathfindingArea {
     }
 
     public void placeFinishField(int row, int col) {
-        board[row-1][col-1] = new Field(EndField);
+        board[row-1][col-1] = new Field(FinishField);
     }
 
     public Field[][] getBoard() {
