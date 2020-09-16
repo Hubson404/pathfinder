@@ -35,6 +35,10 @@ public class PathfindingArea {
         board[row-1][col-1] = new Field(FinishField);
     }
 
+    public void placeObstacleField(int row, int col) {
+        board[row-1][col-1] = new Field(Obstacle);
+    }
+
     public Field[][] getBoard() {
         return board;
     }
