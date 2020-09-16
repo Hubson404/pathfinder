@@ -27,6 +27,34 @@ public class PathfindingArea {
         }
     }
 
+    public void showBoard() {
+        for (int i = 0; i < boardWidth * 4; i++) {
+            System.out.print("-");
+        }
+        System.out.println("-");
+        for (Field[] row : board) {
+            for (Field field : row) {
+                if (field.fieldType == Empty) {
+                    System.out.print("|   ");
+                }
+                if (field.fieldType == StartField) {
+                    System.out.print("|SRT");
+                }
+                if (field.fieldType == FinishField) {
+                    System.out.print("|FNS");
+                }
+                if (field.fieldType == Obstacle) {
+                    System.out.print("|-#-");
+                }
+            }
+            System.out.println("|");
+            for (int i = 0; i < boardWidth * 4; i++) {
+                System.out.print("-");
+            }
+            System.out.println("-");
+        }
+    }
+
     public void placeStartField(int row, int col) {
         board[row-1][col-1] = new Field(StartField);
     }
