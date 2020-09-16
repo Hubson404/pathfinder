@@ -2,8 +2,7 @@ package org.hubson404.pathfinder;
 
 import java.util.Arrays;
 
-import static org.hubson404.pathfinder.FieldType.Empty;
-import static org.hubson404.pathfinder.FieldType.StartField;
+import static org.hubson404.pathfinder.FieldType.*;
 
 
 public class PathfindingArea {
@@ -30,6 +29,10 @@ public class PathfindingArea {
 
     public void placeStartField(int row, int col) {
         board[row-1][col-1] = new Field(StartField);
+    }
+
+    public void placeFinishField(int row, int col) {
+        board[row-1][col-1] = new Field(EndField);
     }
 
     public Field[][] getBoard() {
