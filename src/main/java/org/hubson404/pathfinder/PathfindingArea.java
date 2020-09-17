@@ -22,7 +22,7 @@ public class PathfindingArea {
     private void fillBoardWithEmptyFields(Field[][] board) {
         for (int i = 0; i < boardHeight; i++) {
             for (int k = 0; k < boardWidth; k++) {
-                board[i][k] = new Field(Empty);
+                board[i][k] = new Field(i, k, Empty);
             }
         }
     }
@@ -56,15 +56,15 @@ public class PathfindingArea {
     }
 
     public void placeStartField(int row, int col) {
-        board[row-1][col-1] = new Field(Start);
+        board[row - 1][col - 1] = new Field(row, col, Start);
     }
 
     public void placeFinishField(int row, int col) {
-        board[row-1][col-1] = new Field(Finish);
+        board[row - 1][col - 1] = new Field(row, col, Finish);
     }
 
     public void placeObstacleField(int row, int col) {
-        board[row-1][col-1] = new Field(Obstacle);
+        board[row - 1][col - 1] = new Field(row, col, Obstacle);
     }
 
     public Field[][] getBoard() {
