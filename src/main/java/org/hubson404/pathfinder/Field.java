@@ -2,8 +2,12 @@ package org.hubson404.pathfinder;
 
 public class Field {
 
-    int row;
-    int column;
+    private final int row;
+    private final int column;
+    private boolean isRightEmpty;
+    private boolean isLeftEmpty;
+    private boolean isTopEmpty;
+    private boolean isBottomEmpty;
 
     FieldType fieldType;
 
