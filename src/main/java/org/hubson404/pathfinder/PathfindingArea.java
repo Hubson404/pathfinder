@@ -22,7 +22,7 @@ public class PathfindingArea {
     private void fillBoardWithEmptyFields(Field[][] board) {
         for (int i = 0; i < boardHeight; i++) {
             for (int k = 0; k < boardWidth; k++) {
-                board[i][k] = new Field(i, k, Empty);
+                board[i][k] = new Field(i, k, EMPTY);
             }
         }
     }
@@ -34,16 +34,16 @@ public class PathfindingArea {
         System.out.println("-");
         for (Field[] row : board) {
             for (Field field : row) {
-                if (field.fieldType == Empty) {
+                if (field.fieldType == EMPTY) {
                     System.out.print("|   ");
                 }
-                if (field.fieldType == Start) {
+                if (field.fieldType == START) {
                     System.out.print("|SRT");
                 }
-                if (field.fieldType == Finish) {
+                if (field.fieldType == FINISH) {
                     System.out.print("|FNS");
                 }
-                if (field.fieldType == Obstacle) {
+                if (field.fieldType == OBSTACLE) {
                     System.out.print("|-#-");
                 }
             }
@@ -56,15 +56,15 @@ public class PathfindingArea {
     }
 
     public void placeStartField(int row, int col) {
-        board[row - 1][col - 1] = new Field(row, col, Start);
+        board[row][col] = new Field(row, col, START);
     }
 
     public void placeFinishField(int row, int col) {
-        board[row - 1][col - 1] = new Field(row, col, Finish);
+        board[row][col] = new Field(row, col, FINISH);
     }
 
     public void placeObstacleField(int row, int col) {
-        board[row - 1][col - 1] = new Field(row, col, Obstacle);
+        board[row][col] = new Field(row, col, OBSTACLE);
     }
 
     public Field[][] getBoard() {
