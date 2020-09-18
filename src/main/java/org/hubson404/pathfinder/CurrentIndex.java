@@ -15,5 +15,10 @@ public class CurrentIndex {
         this.initialRow = row;
         this.initialColumn = column;
         this.board = board;
+        getField();
+    }
+
+    private void getField() {
+        currentField = board[row][column];
     }
 }
