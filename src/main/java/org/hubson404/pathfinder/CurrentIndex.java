@@ -21,4 +21,37 @@ public class CurrentIndex {
     private void getField() {
         currentField = board[row][column];
     }
+
+    public int getInitialRow() {
+        return initialRow;
+    }
+
+    public int getInitialColumn() {
+        return initialColumn;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
+    @Override
+    public String toString() {
+        return "CurrentIndex{" +
+                "row=" + row +
+                ", column=" + column +
+                ", currentFieldType=" + currentField.fieldType +
+                '}';
+    }
 }
