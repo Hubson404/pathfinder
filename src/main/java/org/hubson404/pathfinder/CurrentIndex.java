@@ -22,6 +22,15 @@ public class CurrentIndex {
         currentField = board[row][column];
     }
 
+    public FieldType getCurrentFieldType() {
+        return currentField.fieldType;
+    }
+
+    public void resetIndexPosition() {
+        setRow(initialRow);
+        setColumn(initialColumn);
+    }
+
     public void moveRight() {
         setColumn(column + 1);
         getField();
