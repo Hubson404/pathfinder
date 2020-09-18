@@ -22,6 +22,26 @@ public class CurrentIndex {
         currentField = board[row][column];
     }
 
+    public void moveRight() {
+        setColumn(column + 1);
+        getField();
+    }
+
+    public void moveLeft() {
+        setColumn(column - 1);
+        getField();
+    }
+
+    public void moveUp() {
+        setRow(row - 1);
+        getField();
+    }
+
+    public void moveDown() {
+        setRow(row + 1);
+        getField();
+    }
+
     public int getInitialRow() {
         return initialRow;
     }
