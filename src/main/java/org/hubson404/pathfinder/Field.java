@@ -17,6 +17,27 @@ public class Field {
         this.fieldType = fieldType;
     }
 
+    private boolean checkAdjecentField(DirectionType direction, Field[][] board) {
+        int nextRow = row;
+        int nextColumn = column;
+
+        if (direction == DirectionType.RIGHT) {
+            nextColumn = +1;
+        }
+        if (direction == DirectionType.LEFT) {
+            nextColumn--;
+        }
+        if (direction == DirectionType.UP) {
+            nextRow++;
+        }
+        if (direction == DirectionType.DOWN) {
+            nextColumn--;
+        }
+        Field adjecentField = board[nextRow][nextColumn];
+
+        return adjecentField.fieldType == FieldType.EMPTY;
+    }
+
     @Override
     public String toString() {
         return "Field{" +
