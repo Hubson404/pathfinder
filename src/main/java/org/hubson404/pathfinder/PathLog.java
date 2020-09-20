@@ -60,6 +60,27 @@ public class PathLog {
         }
     }
 
+    public void displayPath() {
+
+        markPath();
+
+        for (int i = 0; i < boardWidth * 4; i++) {
+            System.out.print("-");
+        }
+        System.out.println("-");
+        for (String[] row : board) {
+            for (String field : row) {
+                System.out.print("| " + field + " ");
+
+            }
+            System.out.println("|");
+            for (int i = 0; i < boardWidth * 4; i++) {
+                System.out.print("-");
+            }
+            System.out.println("-");
+        }
+    }
+
     private String[][] setNewEmptyBoard() {
         String[][] board = new String[boardHeight][boardWidth];
         for (int i = 0; i < boardHeight; i++) {
