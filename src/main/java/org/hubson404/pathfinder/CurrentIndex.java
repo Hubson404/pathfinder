@@ -56,6 +56,7 @@ public class CurrentIndex {
 
     private void move() {
         getField();
+        pathLog.path.add(row + "," + column);
     }
 
     public int getInitialRow() {
