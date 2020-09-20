@@ -13,5 +13,11 @@ public class PathLog {
 
     public PathLog(String startingFieldCoordinates) {
         startingField = startingFieldCoordinates;
+        resetPath();
+    }
+
+    public void resetPath() {
+        path.clear();
+        path.add(startingField);
     }
 }
