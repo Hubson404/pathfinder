@@ -8,6 +8,7 @@ public class CurrentIndex {
     private int column;
     private Field currentField;
     private final Field[][] board;
+    public PathLog pathLog;
 
     public CurrentIndex(int row, int column, Field[][] board) {
         this.row = row;
@@ -16,6 +17,7 @@ public class CurrentIndex {
         this.initialColumn = column;
         this.board = board;
         getField();
+        pathLog = new PathLog(initialRow + "," + initialColumn);
     }
 
     private void getField() {
@@ -51,7 +53,7 @@ public class CurrentIndex {
         move();
     }
 
-    private void move(){
+    private void move() {
         getField();
     }
 
