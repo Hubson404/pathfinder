@@ -20,4 +20,14 @@ public class PathLog {
         path.clear();
         path.add(startingField);
     }
+
+    private String[][] setNewEmptyBoard() {
+        String[][] board = new String[boardHeight][boardWidth];
+        for (int i = 0; i < boardHeight; i++) {
+            for (int k = 0; k < boardWidth; k++) {
+                board[i][k] = " ";
+            }
+        }
+        return board;
+    }
 }
