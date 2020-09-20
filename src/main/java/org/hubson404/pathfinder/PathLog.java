@@ -8,6 +8,7 @@ public class PathLog {
     int boardWidth = 10;
     int boardHeight = 5;
     private final String startingField;
+    private String[][] board;
 
     public List<String> path = new ArrayList<>();
 
@@ -22,7 +23,8 @@ public class PathLog {
     }
 
     public void markPath() {
-        String[][] board = setNewEmptyBoard();
+
+        board = setNewEmptyBoard();
 
         for (int i = 0; i < path.size(); i++) {
 
@@ -54,7 +56,6 @@ public class PathLog {
             if (i == path.size() - 1) {
                 symbol = "F";
             }
-
             board[currentY][currentX] = symbol;
         }
     }
