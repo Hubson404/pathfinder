@@ -31,6 +31,7 @@ public class CurrentIndex {
     public void resetIndexPosition() {
         setRow(initialRow);
         setColumn(initialColumn);
+        pathLog.resetPath();
     }
 
     public void moveRight() {
