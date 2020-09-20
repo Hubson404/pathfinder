@@ -33,21 +33,25 @@ public class CurrentIndex {
 
     public void moveRight() {
         setColumn(column + 1);
-        getField();
+        move();
     }
 
     public void moveLeft() {
         setColumn(column - 1);
-        getField();
+        move();
     }
 
     public void moveUp() {
         setRow(row - 1);
-        getField();
+        move();
     }
 
     public void moveDown() {
         setRow(row + 1);
+        move();
+    }
+
+    private void move(){
         getField();
     }
 
